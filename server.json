@@ -1,0 +1,61 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.sandboxapi/sandboxapi-mcp",
+  "title": "SandboxAPI",
+  "description": "Execute code in 8+ programming languages via sandboxed Docker+gVisor containers. Supports Python, JavaScript, TypeScript, Bash, Java, C++, C, and Go.",
+  "repository": {
+    "url": "https://github.com/sandboxapi/sandboxapi-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "sandboxapi/mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "streamable-http",
+        "url": "/mcp"
+      },
+      "environmentVariables": [
+        {
+          "name": "SANDBOXAPI_API_KEY",
+          "description": "API key for SandboxAPI backend",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "MCP_API_KEY",
+          "description": "API key for MCP endpoint authentication",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "MCP_PORT",
+          "description": "Port for the MCP server (default: 8081)",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.sandboxapi.dev/mcp"
+    }
+  ],
+  "tools": [
+    {
+      "name": "execute_code",
+      "description": "Execute code in a sandboxed container. Supports Python, JavaScript, TypeScript, Bash, Java, C++, C, and Go."
+    },
+    {
+      "name": "execute_batch",
+      "description": "Execute multiple code snippets in sandboxed containers. Each execution runs independently."
+    },
+    {
+      "name": "list_languages",
+      "description": "List all supported programming languages with their versions and examples."
+    }
+  ]
+}

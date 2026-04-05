@@ -1,0 +1,4 @@
+sandboxapi-mcp
+*.exe
+.env
+.DS_Store

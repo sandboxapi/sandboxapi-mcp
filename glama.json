@@ -1,0 +1,27 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "name": "sandboxapi-mcp",
+  "display_name": "SandboxAPI",
+  "description": "Execute code in 8 programming languages via gVisor-sandboxed Docker containers. Supports Python, JavaScript, TypeScript, Go, Java, C++, C, and Bash.",
+  "repository": "https://github.com/sandboxapi/sandboxapi-mcp",
+  "maintainers": [
+    "MichielDeRuiter"
+  ],
+  "tags": [
+    "code-execution",
+    "sandbox",
+    "docker",
+    "gvisor",
+    "multi-language",
+    "ai-agent"
+  ],
+  "categories": [
+    "Code Execution",
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "platforms": [
+    "linux",
+    "macos"
+  ]
+}
