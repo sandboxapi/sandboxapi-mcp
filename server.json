@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.sandboxapi/sandboxapi-mcp",
+  "name": "io.github.MichielDeRuiter/sandboxapi-mcp",
   "title": "SandboxAPI",
   "description": "Execute code in 8 languages (Python, JS, TS, Go, Java, C++, C, Bash) in gVisor sandboxes.",
   "repository": {
