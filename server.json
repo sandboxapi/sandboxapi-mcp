@@ -8,36 +8,6 @@
     "source": "github"
   },
   "version": "1.0.0",
-  "packages": [
-    {
-      "registryType": "oci",
-      "identifier": "sandboxapi/mcp",
-      "version": "1.0.0",
-      "transport": {
-        "type": "streamable-http",
-        "url": "/mcp"
-      },
-      "environmentVariables": [
-        {
-          "name": "SANDBOXAPI_API_KEY",
-          "description": "API key for SandboxAPI backend",
-          "isRequired": true,
-          "isSecret": true
-        },
-        {
-          "name": "MCP_API_KEY",
-          "description": "API key for MCP endpoint authentication",
-          "isRequired": false,
-          "isSecret": true
-        },
-        {
-          "name": "MCP_PORT",
-          "description": "Port for the MCP server (default: 8081)",
-          "isRequired": false
-        }
-      ]
-    }
-  ],
   "remotes": [
     {
       "type": "streamable-http",
